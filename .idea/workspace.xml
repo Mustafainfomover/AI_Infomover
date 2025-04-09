@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82558c38-9e8b-47ff-9ea5-19ace8c53bd9" name="Changes" comment="" />
+    <list default="true" id="82558c38-9e8b-47ff-9ea5-19ace8c53bd9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llms/profiles_chatbot2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/llms/chatbot2_with_mistral.py" beforeDir="false" afterPath="$PROJECT_DIR$/llms/chatbot2_with_mistral.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/llms/chatbot3_with_mistral.py" beforeDir="false" afterPath="$PROJECT_DIR$/llms/chatbot3_with_mistral.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +24,26 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Mustafainfomover"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mustafainfomover/AI_Infomover.git",
+    "accountId": "77119b79-6d8b-4627-a67a-2a87448badc3"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2vQl9mLjrlWYcJjTD1imEkCU1y3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,6 +56,8 @@
     "Python.chatbot_with_mistral.executor": "Run",
     "Python.profiles_chatbot.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/HP/OneDrive/Desktop/AI Infomover",
@@ -42,7 +67,7 @@
     "settings.editor.selected.configurable": "editor.preferences.completion"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.profiles_chatbot">
+  <component name="RunManager" selected="Python.chatbot3_with_mistral">
     <configuration name="chatbot2_with_mistral" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AI Infomover" />
       <option name="ENV_FILES" value="" />
@@ -133,9 +158,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.profiles_chatbot" />
         <item itemvalue="Python.chatbot3_with_mistral" />
         <item itemvalue="Python.chatbot2_with_mistral" />
+        <item itemvalue="Python.profiles_chatbot" />
         <item itemvalue="Python.chatbot_with_mistral" />
       </list>
     </recent_temporary>

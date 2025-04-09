@@ -6,16 +6,10 @@ import re
 
 load_dotenv()
 
-def replying(answer):
-    lines = re.split(r'[.:]', answer) #answer.split("." or ":")
-    for line in lines:
-        words=line.split()
-        for word in words:
-            print(word, end=" ")
-            time.sleep(0.15)
-        print()
+
 
 def main():
+
     api_key = os.getenv('MISTRAL_API_KEY')
     if api_key is None:
         print("better set your key")
@@ -43,9 +37,9 @@ def main():
 
             )
 
-            answer = chat_response.choices[0].message.content
-            # print(type(answer))
-            replying(answer)
+            print(chat_response.choices[0].message.content)
+
+
 
 if __name__ == '__main__':
     main()
