@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82558c38-9e8b-47ff-9ea5-19ace8c53bd9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llms/profiles_chatbot2.py" afterDir="false" />
+    <list default="true" id="82558c38-9e8b-47ff-9ea5-19ace8c53bd9" name="Changes" comment="together ai and profile search">
+      <change afterPath="$PROJECT_DIR$/llms/chatbot_with_google_ai.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AI Infomover.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AI Infomover.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/llms/chatbot2_with_mistral.py" beforeDir="false" afterPath="$PROJECT_DIR$/llms/chatbot2_with_mistral.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/llms/chatbot3_with_mistral.py" beforeDir="false" afterPath="$PROJECT_DIR$/llms/chatbot3_with_mistral.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/llms/chatbot_with_together_ai.py" beforeDir="false" afterPath="$PROJECT_DIR$/llms/chatbot_with_together_ai.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,18 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Mustafainfomover"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Mustafainfomover&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Mustafainfomover/AI_Infomover.git",
-    "accountId": "77119b79-6d8b-4627-a67a-2a87448badc3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mustafainfomover/AI_Infomover.git&quot;,
+    &quot;accountId&quot;: &quot;77119b79-6d8b-4627-a67a-2a87448badc3&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -53,22 +52,29 @@
   "keyToString": {
     "Python.chatbot2_with_mistral.executor": "Run",
     "Python.chatbot3_with_mistral.executor": "Run",
+    "Python.chatbot_with_google_ai.executor": "Run",
     "Python.chatbot_with_mistral.executor": "Run",
+    "Python.chatbot_with_together_ai.executor": "Run",
     "Python.profiles_chatbot.executor": "Run",
+    "Python.profiles_chatbot2.executor": "Run",
+    "Python.prompt_templates.executor": "Run",
+    "Python.simple_chat_with_langchain2 (1).executor": "Run",
+    "Python.simple_chat_with_langchain2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/HP/OneDrive/Desktop/AI Infomover",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.completion"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.chatbot3_with_mistral">
-    <configuration name="chatbot2_with_mistral" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.simple_chat_with_langchain2 (1)">
+    <configuration name="chatbot_with_google_ai" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AI Infomover" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,7 +87,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llms/chatbot2_with_mistral.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llms/chatbot_with_google_ai.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -90,7 +96,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="chatbot3_with_mistral" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="profiles_chatbot2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AI Infomover" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,7 +109,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llms/chatbot3_with_mistral.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llms/profiles_chatbot2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,7 +118,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="chatbot_with_mistral" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="prompt_templates" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AI Infomover" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,11 +127,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llms" />
+      <option name="SDK_NAME" value="Python 3.13 (AI Infomover)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llms/chatbot_with_mistral.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain/prompt_templates.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,7 +141,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="profiles_chatbot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="simple_chat_with_langchain2 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AI Infomover" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,11 +150,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llms" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chatbot_project" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llms/profiles_chatbot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chatbot_project/simple_chat_with_langchain2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,12 +163,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="simple_chat_with_langchain2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AI Infomover" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain/simple_chat_with_langchain2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.simple_chat_with_langchain2" />
+      <item itemvalue="Python.simple_chat_with_langchain2 (1)" />
+      <item itemvalue="Python.chatbot_with_google_ai" />
+      <item itemvalue="Python.profiles_chatbot2" />
+      <item itemvalue="Python.prompt_templates" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.chatbot3_with_mistral" />
-        <item itemvalue="Python.chatbot2_with_mistral" />
-        <item itemvalue="Python.profiles_chatbot" />
-        <item itemvalue="Python.chatbot_with_mistral" />
+        <item itemvalue="Python.simple_chat_with_langchain2 (1)" />
+        <item itemvalue="Python.profiles_chatbot2" />
+        <item itemvalue="Python.simple_chat_with_langchain2" />
+        <item itemvalue="Python.prompt_templates" />
+        <item itemvalue="Python.chatbot_with_google_ai" />
       </list>
     </recent_temporary>
   </component>
@@ -174,6 +211,41 @@
       <option name="presentableId" value="Default" />
       <updated>1744085029829</updated>
     </task>
+    <task id="LOCAL-00001" summary="together ai and profile search">
+      <option name="closed" value="true" />
+      <created>1744201813420</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744201813420</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="together ai and profile search" />
+    <option name="LAST_COMMIT_MESSAGE" value="together ai and profile search" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/llms/chatbot_with_together_ai.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

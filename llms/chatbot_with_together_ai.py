@@ -9,7 +9,7 @@ class ChatBot:
     def __init__(self):
         self.api_key = os.getenv('TOGETHER_AI_API_KEY')  # Ensure API key is stored in .env
         self.model = "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free"  # Adjust based on available models
-        self.url = "https://api.together.xyz/v1/chat/completions"
+        self.url = os.getenv('TOGETHER_AI_ENDPOINT')
         self.conversation_history = []  # Stores previous messages for memory
 
     def get_user_input(self):
