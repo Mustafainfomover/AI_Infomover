@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82558c38-9e8b-47ff-9ea5-19ace8c53bd9" name="Changes" comment="together ai and profile search">
-      <change afterPath="$PROJECT_DIR$/llms/chatbot_with_google_ai.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AI Infomover.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AI Infomover.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/llms/chatbot_with_together_ai.py" beforeDir="false" afterPath="$PROJECT_DIR$/llms/chatbot_with_together_ai.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="82558c38-9e8b-47ff-9ea5-19ace8c53bd9" name="Changes" comment="profile with langchain" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,31 +42,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.chatbot2_with_mistral.executor": "Run",
-    "Python.chatbot3_with_mistral.executor": "Run",
-    "Python.chatbot_with_google_ai.executor": "Run",
-    "Python.chatbot_with_mistral.executor": "Run",
-    "Python.chatbot_with_together_ai.executor": "Run",
-    "Python.profiles_chatbot.executor": "Run",
-    "Python.profiles_chatbot2.executor": "Run",
-    "Python.prompt_templates.executor": "Run",
-    "Python.simple_chat_with_langchain2 (1).executor": "Run",
-    "Python.simple_chat_with_langchain2.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/HP/OneDrive/Desktop/AI Infomover",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.chatbot2_with_mistral.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chatbot3_with_mistral.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chatbot_with_google_ai.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chatbot_with_mistral.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chatbot_with_together_ai.executor&quot;: &quot;Run&quot;,
+    &quot;Python.profiles_chatbot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.profiles_chatbot2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prompt_templates.executor&quot;: &quot;Run&quot;,
+    &quot;Python.simple_chat_with_langchain2 (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.simple_chat_with_langchain2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/OneDrive/Desktop/AI Infomover&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.simple_chat_with_langchain2 (1)">
     <configuration name="chatbot_with_google_ai" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AI Infomover" />
@@ -219,7 +213,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744201813420</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="profile with langchain">
+      <option name="closed" value="true" />
+      <created>1744375689360</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744375689361</updated>
+    </task>
+    <task id="LOCAL-00003" summary="profile with langchain">
+      <option name="closed" value="true" />
+      <created>1744375709775</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744375709775</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,7 +245,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="together ai and profile search" />
-    <option name="LAST_COMMIT_MESSAGE" value="together ai and profile search" />
+    <MESSAGE value="profile with langchain" />
+    <option name="LAST_COMMIT_MESSAGE" value="profile with langchain" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
