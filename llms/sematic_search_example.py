@@ -9,65 +9,65 @@ from dotenv import load_dotenv
 import os
 from typing import List
 
-## ------------------------------- Setup Environment and Configs -----------------------------------
-
+# --------------------------- Load Environment Variables -----------------------------
 load_dotenv()
 
-mistral_api_key = os.getenv("MISTRAL_API_KEY")
-if not mistral_api_key:
-    raise EnvironmentError("MISTRAL API KEY not found in environment variables.")
-print("Mistral API Key loaded successfully.")
+# (Optional) HuggingFace token to avoid tokenizer warning
+# You can add this to your .env file as: HF_TOKEN=your_token_here
+hf_token = os.getenv("HF_TOKEN")
+if hf_token:
+    os.environ["HF_TOKEN"] = hf_token
 
-## ------------------------------- Load and Read PDF File -------------------------------------------
+# --------------------------- Main Script --------------------------------------------
+if __name__ == "__main__":
+    mistral_api_key = os.getenv("MISTRAL_API_KEY")
+    if not mistral_api_key:
+        raise EnvironmentError("MISTRAL API KEY not found in environment variables.")
+    print("Mistral API Key loaded successfully.")
 
-pdf_url = "https://s1.q4cdn.com/806093406/files/doc_downloads/2023/414759-1-_5_Nike-NPS-Combo_Form-10-K_WR.pdf"
-# can put any other pdf file according to you
-pdf_reader = PyPDFLoader(pdf_url)
-documents = pdf_reader.load()
+    # ---------------------- Load and Read PDF File -----------------------------------
+    pdf_url = "https://s1.q4cdn.com/806093406/files/doc_downloads/2023/414759-1-_5_Nike-NPS-Combo_Form-10-K_WR.pdf"
+    pdf_reader = PyPDFLoader(pdf_url)
+    documents = pdf_reader.load()
 
-## ------------------------------- Text Chunking ----------------------------------------------------
+    # ---------------------- Text Chunking -------------------------------------------
+    chunker = RecursiveCharacterTextSplitter(
+        chunk_size=1000,
+        chunk_overlap=200,
+        add_start_index=True
+    )
+    chunks = chunker.split_documents(documents)
 
-chunker = RecursiveCharacterTextSplitter(
-    chunk_size=1000,
-    chunk_overlap=200,    #200 wors will overlap
-    add_start_index=True
-)
-chunks = chunker.split_documents(documents)
+    # ---------------------- Generate Embeddings --------------------------------------
+    embedding_model = MistralAIEmbeddings(model="mistral-embed", api_key=mistral_api_key)
 
-## ------------------------------- Generate Embeddings ----------------------------------------------
+    # Optional vector shape check
+    sample_vector_1 = embedding_model.embed_query(chunks[0].page_content)
+    sample_vector_2 = embedding_model.embed_query(chunks[1].page_content)
 
-embedding_model = MistralAIEmbeddings(model="mistral-embed", api_key=mistral_api_key)
+    assert len(sample_vector_1) == len(sample_vector_2), "Embedding sizes do not match"
+    print(f"Vector size: {len(sample_vector_1)}")
 
-sample_vector_1 = embedding_model.embed_query(chunks[0].page_content)
-sample_vector_2 = embedding_model.embed_query(chunks[1].page_content)
+    # ---------------------- Create Vector Store --------------------------------------
+    vector_db = InMemoryVectorStore(embedding_model)
+    doc_ids = vector_db.add_documents(documents=chunks)
 
-assert len(sample_vector_1) == len(sample_vector_2), "Embedding sizes do not match"
+    # ---------------------- Query Example --------------------------------------------
+    query_text = "How many distribution centers does Nike have in the US?"
+    matched_docs = vector_db.similarity_search(query_text)
 
-print(f"Vector size: {len(sample_vector_1)}")
+    print("\nTop matched content:\n", matched_docs[0].page_content)
 
-## ------------------------------- Create Vector Store ----------------------------------------------
+    # ---------------------- Batch Retrieval Chain -------------------------------------
+    @chain
+    def search_documents(user_query: str) -> List[Document]:
+        return vector_db.similarity_search(user_query, k=1)
 
-vector_db = InMemoryVectorStore(embedding_model)
-doc_ids = vector_db.add_documents(documents=chunks)
+    batch_queries = [
+        "How many distribution centers does Nike have in the US?",
+        "When was Nike incorporated?"
+    ]
 
-## ------------------------------- Query Example ----------------------------------------------------
-
-query_text = "How many distribution centers does Nike have in the US?"
-matched_docs = vector_db.similarity_search(query_text)
-
-print("Top matched content:\n", matched_docs[0].page_content)
-
-## ------------------------------- Batch Retrieval Chain --------------------------------------------
-
-@chain
-def search_documents(user_query: str) -> List[Document]:
-    return vector_db.similarity_search(user_query, k=1)
-
-batch_queries = [
-    "How many distribution centers does Nike have in the US?",
-    "When was Nike incorporated?"
-]
-
-results = search_documents.batch(batch_queries)
-for i, result in enumerate(results):
-    print(f"\nResult {i+1}:\n{result[0].page_content}")
+    results = search_documents.batch(batch_queries)
+    for i, result in enumerate(results):
+        print(f"\nResult {i+1}:\n{result[0].page_content}")
