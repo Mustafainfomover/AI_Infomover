@@ -48,7 +48,7 @@ if __name__ == "__main__":
     assert len(sample_vector_1) == len(sample_vector_2), "Embedding sizes do not match"
     print(f"Vector size: {len(sample_vector_1)}")
 
-    # ---------------------- Create Vector Store --------------------------------------
+    #  Create Vector Store
     vector_db = InMemoryVectorStore(embedding_model)
     doc_ids = vector_db.add_documents(documents=chunks)
 
