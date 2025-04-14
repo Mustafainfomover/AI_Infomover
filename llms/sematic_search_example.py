@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 import os
 from typing import List
 
-# --------------------------- Load Environment Variables -----------------------------
+# Load Environment Variables
 load_dotenv()
 
 # (Optional) HuggingFace token to avoid tokenizer warning
@@ -18,7 +18,7 @@ hf_token = os.getenv("HF_TOKEN")
 if hf_token:
     os.environ["HF_TOKEN"] = hf_token
 
-# --------------------------- Main Script --------------------------------------------
+# Main Script
 if __name__ == "__main__":
     mistral_api_key = os.getenv("MISTRAL_API_KEY")
     if not mistral_api_key:
