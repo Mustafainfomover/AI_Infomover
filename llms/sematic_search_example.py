@@ -25,12 +25,12 @@ if __name__ == "__main__":
         raise EnvironmentError("MISTRAL API KEY not found in environment variables.")
     print("Mistral API Key loaded successfully.")
 
-    # ---------------------- Load and Read PDF File -----------------------------------
+    # Load and Read PDF File
     pdf_url = "https://s1.q4cdn.com/806093406/files/doc_downloads/2023/414759-1-_5_Nike-NPS-Combo_Form-10-K_WR.pdf"
     pdf_reader = PyPDFLoader(pdf_url)
     documents = pdf_reader.load()
 
-    # ---------------------- Text Chunking -------------------------------------------
+    #Text Chunking
     chunker = RecursiveCharacterTextSplitter(
         chunk_size=1000,
         chunk_overlap=200,
@@ -38,7 +38,7 @@ if __name__ == "__main__":
     )
     chunks = chunker.split_documents(documents)
 
-    # ---------------------- Generate Embeddings --------------------------------------
+    # Generate Embeddings
     embedding_model = MistralAIEmbeddings(model="mistral-embed", api_key=mistral_api_key)
 
     # Optional vector shape check
@@ -52,13 +52,13 @@ if __name__ == "__main__":
     vector_db = InMemoryVectorStore(embedding_model)
     doc_ids = vector_db.add_documents(documents=chunks)
 
-    # ---------------------- Query Example --------------------------------------------
+    # Query Example
     query_text = "How many distribution centers does Nike have in the US?"
     matched_docs = vector_db.similarity_search(query_text)
 
     print("\nTop matched content:\n", matched_docs[0].page_content)
 
-    # ---------------------- Batch Retrieval Chain -------------------------------------
+    # Batch Retrieval Chain
     @chain
     def search_documents(user_query: str) -> List[Document]:
         return vector_db.similarity_search(user_query, k=1)
